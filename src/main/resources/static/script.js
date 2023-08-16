@@ -35,7 +35,8 @@ searchButton.addEventListener("click", () => {
 let isAccountValid = false;
 document.querySelector("#accountInput").addEventListener("input", function () {
     let inputAccount = this.value;
-    isAccountValid = inputAccount.length >= 10 && inputAccount.length <= 14;
+    isAccountValid = inputAccount.length >= 10 && inputAccount.length <= 14
+        && /^\d+$/.test(inputAccount);
 
     if (isAccountValid) {
         this.classList.remove("is-invalid");
