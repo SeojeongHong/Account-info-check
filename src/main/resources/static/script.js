@@ -31,6 +31,20 @@ searchButton.addEventListener("click", () => {
 });
 
 
+//계좌 입력 시 유효성 검사
+let isAccountValid = false;
+document.querySelector("#accountInput").addEventListener("input", function () {
+    let inputAccount = this.value;
+    isAccountValid = inputAccount.length >= 10 && inputAccount.length <= 14;
+
+    if (isAccountValid) {
+        this.classList.remove("is-invalid");
+    } else {
+        this.classList.add("is-invalid");
+    }
+});
+
+//계좌 포맷
 function dash(str) {
     str = String(str);
     return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1-');
