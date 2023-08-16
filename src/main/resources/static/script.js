@@ -39,10 +39,13 @@ document.querySelector("#accountInput").addEventListener("input", function () {
         && /^\d+$/.test(inputAccount);
 
     if (isAccountValid) {
+        searchButton.disabled=false;
         this.classList.remove("is-invalid");
     } else {
+        searchButton.disabled=true;
         this.classList.add("is-invalid");
     }
+
 });
 
 //계좌 포맷
