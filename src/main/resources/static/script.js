@@ -1,6 +1,7 @@
 //조회 API 호출
-const searchButton = document.getElementById("searchButton");
+const selectedBank = document.getElementById("bank-select");
 const accountInput = document.getElementById("accountInput");
+const searchButton = document.getElementById("searchButton");
 
 const count = document.getElementById("count");
 const accountInfo1 = document.getElementById("account1");
@@ -47,6 +48,13 @@ document.querySelector("#accountInput").addEventListener("input", function () {
     }
 
 });
+
+//경고메세지 표시
+document.getElementById("searchButton").onclick = function () {
+    var msgDiv = document.getElementById("alert-msg");
+    msgDiv.style.display = "block";
+};
+
 
 //계좌 포맷
 function dash(str) {
