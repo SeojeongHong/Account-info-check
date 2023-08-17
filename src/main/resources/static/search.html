@@ -26,16 +26,15 @@
     <br>
 <!--    계좌번호 입력-->
     <div class="input-group mb-3">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">은행
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item">신한</a></li>    <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item">농협</a></li>    <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item">우리</a></li>    <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item">국민</a></li>
-        </ul>
-        <input type="text" class="form-control" type="text" id="accountInput" placeholder="계좌번호를 입력하세요"/>
+
+        <select class="form-select" id="bank-select">
+            <option selected>은행</option>
+            <option value="1">신한</option>
+            <option value="2">농협</option>
+            <option value="3">우리</option>
+        </select>
+
+        <input type="text" style="width: 60%" class="form-control" type="text" id="accountInput" placeholder="계좌번호를 입력하세요"/>
         <button class="btn btn-primary" type="button" id="searchButton">🔍</button>
         <p class="text-center invalid-feedback" style="font-size:.8em">
             10-14자리 숫자를 입력하세요
