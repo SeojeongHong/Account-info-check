@@ -62,6 +62,22 @@ document.getElementById("continue").onclick = function () {
     searchButton.disabled = true;
 };
 
+//계좌 소유자 정보 표시
+const accountName = document.getElementById("account-name");
+searchButton.addEventListener("click", () => {
+    const accountNumber = accountInput.value;
+    if (accountNumber) {
+        // API 호출
+        const apiUrl = "/search/" + accountNumber;
+        $.get(apiUrl, function (data) {
+            if(data)
+                accountName.textContent = data;
+            else
+                accountName.textContent = "(알수없음)";
+        });
+    }
+});
+
 
 //계좌 포맷
 function dash(str) {
