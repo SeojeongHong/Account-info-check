@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -32,5 +34,11 @@ public class CheatController {
             }
         }
         return count;
+    }
+
+    //모든 신고 내역 조회
+    @GetMapping("/cheat/all")
+    public List<CheatAccount> getAllCheatAccount(){
+        return new ArrayList<CheatAccount>(cheatAccountMap.values());
     }
 }
