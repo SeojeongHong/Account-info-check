@@ -50,10 +50,10 @@ document.querySelector("#accountInput").addEventListener("input", function () {
 });
 
 //경고메세지 표시
-document.getElementById("searchButton").onclick = function () {
-    var msgDiv = document.getElementById("alert-msg");
-    msgDiv.style.display = "block";
-};
+// document.getElementById("searchButton").onclick = function () {
+//     var msgDiv = document.getElementById("alert-msg");
+//     msgDiv.style.display = "block";
+// };
 
 
 //계좌 포맷
