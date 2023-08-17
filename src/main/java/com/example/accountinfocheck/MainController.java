@@ -12,7 +12,6 @@ import java.util.Map;
 public class MainController {
 
     private Map<String, String> accountMap;     //계좌번호, 소유자
-
     @PostConstruct
     public void init(){
         accountMap = new HashMap<String, String>();
@@ -20,7 +19,7 @@ public class MainController {
         accountMap.put("2222222222","라마바");
         accountMap.put("3333333333","아자차");
     }
-    
+
     //계좌 - 이름 조회
     @GetMapping("/search/{account}")
     public String getAccount(@PathVariable("account") String account){
