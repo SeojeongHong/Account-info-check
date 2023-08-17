@@ -10,6 +10,7 @@ const msg = document.getElementById("msg");
 const safeMsg = document.getElementById("safe-msg");
 const unsafeMsg = document.getElementById("unsafe-msg");
 const unsafeMsgSmall = document.getElementById("unsafe-msg-small");
+const sendMoney = document.getElementById("send-money");
 
 //계좌 입력 시 유효성 검사
 let isAccountValid = false;
@@ -41,7 +42,8 @@ document.getElementById("searchButton").onclick = function () {
             else {
                 unsafeMsg.style.display = "none";
                 safeMsg.style.display = "block";
-
+                sendMoney.style.display = "block";
+                
                 selectedBank.disabled = true;
                 accountInput.disabled = true;
                 searchButton.disabled = true;
@@ -54,7 +56,7 @@ document.getElementById("searchButton").onclick = function () {
 document.getElementById("continue").onclick = function () {
     unsafeMsg.style.display = "none";
     unsafeMsgSmall.style.display = "block";
-
+    sendMoney.style.display = "block";
     selectedBank.disabled = true;
     accountInput.disabled = true;
     searchButton.disabled = true;
