@@ -43,7 +43,7 @@ document.getElementById("searchButton").onclick = function () {
                 unsafeMsg.style.display = "none";
                 safeMsg.style.display = "block";
                 sendMoney.style.display = "block";
-                
+
                 selectedBank.disabled = true;
                 accountInput.disabled = true;
                 searchButton.disabled = true;
@@ -67,4 +67,19 @@ document.getElementById("continue").onclick = function () {
 function dash(str) {
     str = String(str);
     return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1-');
+}
+
+//돈 단위 표시
+function inputNumberFormat(obj) {
+    obj.value = comma(uncomma(obj.value));
+}
+
+function comma(str) {
+    str = String(str);
+    return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+}
+
+function uncomma(str) {
+    str = String(str);
+    return str.replace(/[^\d]+/g, '');
 }
