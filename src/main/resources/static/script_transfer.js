@@ -75,7 +75,7 @@ searchButton.addEventListener("click", () => {
     const accountNumber = accountInput.value;
     if (accountNumber) {
         // API 호출
-        const apiUrl = "/search/" + accountNumber;
+        const apiUrl = "/accountInfo/" + accountNumber;
         $.get(apiUrl, function (data) {
             if(data)
                 accountName.textContent = data;

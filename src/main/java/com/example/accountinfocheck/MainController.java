@@ -21,13 +21,13 @@ public class MainController {
     }
 
     //계좌 - 이름 조회
-    @GetMapping("/search/{account}")
+    @GetMapping("/accountInfo/{account}")
     public String getAccount(@PathVariable("account") String account){
         return accountMap.get(account);
     }
 
     //모든 계좌 정보 조회
-    @GetMapping("/search/all")
+    @GetMapping("/accountInfo/all")
     public Map<String, String> getAllAccounts() {
         return accountMap;
     }
