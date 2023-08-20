@@ -12,7 +12,7 @@ const unsafeMsg = document.getElementById("unsafe-msg");
 searchButton.addEventListener("click", () => {
     const account = accountInput.value;
     if (account) {
-        const apiUrl = "/cheat/" + account;
+        const apiUrl = "/cheat/count/" + account;
         $.get(apiUrl, function (data) {
             if(data>0) {
                 accountInfo2.textContent = dash(account);

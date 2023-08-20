@@ -2,6 +2,7 @@
 const selectedBank = document.getElementById("bank");
 const searchButton = document.getElementById("searchButton");
 const accountInput = document.getElementById("accountInput");
+const accountInputV = document.querySelector("#accountInput");
 
 const count = document.getElementById("count");
 const accountInfo1 = document.getElementById("account1");
@@ -12,6 +13,8 @@ const unsafeMsg = document.getElementById("unsafe-msg");
 const unsafeMsgSmall = document.getElementById("unsafe-msg-small");
 const sendMoney = document.getElementById("send-money");
 const sendBtn = document.getElementById("send-btn");
+const cancelBtn = document.getElementById("cancel");
+
 
 //계좌 입력 시 유효성 검사
 let isAccountValid = false;
@@ -34,7 +37,7 @@ document.querySelector("#accountInput").addEventListener("input", function () {
 document.getElementById("searchButton").onclick = function () {
     const account = accountInput.value;
     if (account) {
-        const apiUrl = "/cheat/" + account;
+        const apiUrl = "/cheat/count/" + account;
         $.get(apiUrl, function (data) {
             if(data>0) {
                 unsafeMsg.style.display = "block";

@@ -24,7 +24,7 @@ public class CheatController {
     }
 
     //신고 횟수 조회
-    @GetMapping("/cheat/{account}")
+    @GetMapping("/cheat/count/{account}")
     public int getCountOfCheat(@PathVariable("account") String accountNumber){
         int count = 0;
 
